@@ -16,7 +16,7 @@ ENV PATH /athenapdf-service/:$PATH
 
 COPY conf/ /athenapdf-service/conf/
 
-EXPOSE 8080
+EXPOSE 80
 
 CMD ["dumb-init", "weaver"]
 
