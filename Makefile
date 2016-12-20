@@ -40,8 +40,6 @@ buildservice:
 	@docker cp `docker ps -q -n=1`:$(SERVICE_DOCKER_ARTIFACT_FILE) $(SERVICE_DIR)/build/
 	@docker rm -f `docker ps -q -n=1`
 	@chmod +x $(SERVICE_DIR)/build/weaver
-	@docker build --rm -t $(SERVICE_IMAGE) -f $(SERVICE_DIR)/Dockerfile $(SERVICE_DIR)/
-	@rm -rf $(SERVICE_DIR)/build/
 
 testservice:
 	@echo "  $(P) testservice"
